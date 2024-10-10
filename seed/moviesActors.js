@@ -19,7 +19,7 @@ const main = async () => {
     runtime: 83,
     rating: 'PG',
     yearReleased: 1989,
-    ddescription: "In Disney's beguiling animated romp, rebellious 16-year-old mermaid Ariel (Ron Clements) is fascinated with life on land. On one of her visits to the surface, which are forbidden by her controlling father, King Triton, she falls for a human prince.",
+    description: "In Disney's beguiling animated romp, rebellious 16-year-old mermaid Ariel (Ron Clements) is fascinated with life on land. On one of her visits to the surface, which are forbidden by her controlling father, King Triton, she falls for a human prince.",
     image: "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcT47lZDisscep5HPvnVxi684cl0oYqB6fyM2xFLNtNpUjxGltcpHDhag2oCEnoH4qNOQcZ2iQ"
   })
   movie2.save()
@@ -133,24 +133,23 @@ const main = async () => {
     },
     {
         stars: 5,
-        movie: movie1._id
+        movie: movie2._id
     },
     {
         stars: 5,
-        movie: movie1._id
+        movie: movie3._id
     },
     {
         stars: 4,
-        movie: movie1._id
+        movie: movie4._id
     },
     {
         stars: 3,
-        movie: movie1._id
+        movie: movie5._id
     },
   ]
-
-  await Actor.insertMany(actors)
   await Review.insertMany(reviews)
+  await Actor.insertMany(actors)
   console.log('Created movies with actors and reviews!')
 }
 

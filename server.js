@@ -71,3 +71,9 @@ app.get('/reviews/:id', async (req, res) => {
         res.send('Brand not found!')
     }
     })
+
+    app.get('/*', (req, res) => {
+        res.send({
+            error: "404 page not found"
+        })
+      })
